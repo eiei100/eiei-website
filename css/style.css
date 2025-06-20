@@ -111,12 +111,6 @@ header ul li {
     color: #16161a;
     padding: 20px;
 }
-@media screen and (max-width:768px) {
-    .section2 .col {
-        width: 100%;
-        margin-bottom: 24px;
-    }
-}
 .section2 img {
     background-color: #7f5af0;
     width: 60px;
@@ -207,4 +201,13 @@ header ul li {
     font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 6px;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .section2 .col {
+        width: 100%;
+        margin-bottom: 24px;
+    }
 }
