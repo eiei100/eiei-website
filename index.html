@@ -26,9 +26,9 @@
         <div class="row">
             <a href="./" class="logo">hello eiei</a>
             <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -45,7 +45,7 @@
         <div class="filter"></div>
     </section>
 
-    <section class="section2">
+    <section class="section2" id="service">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -80,7 +80,7 @@
         </div>
     </section>
 
-<section class="section3">
+<section class="section3" id="about">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -113,7 +113,7 @@
     </div>
 </section>
 
-<section class="section4">
+<section class="section4" id="news">
     <div class="container">
         <h2>news</h2>
         <hr>
@@ -127,6 +127,22 @@
                 <p>ホームページリリース日</p>
             </li>
         </ul>
+    </div>
+</section>
+
+<section class="section5" id="contact">
+    <div class="container">
+        <h2>お問い合せ</h2>
+        <hr>
+        <form action="./submit.php" method="post">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">お問い合せ内容</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+            <input type="submit" value="送信">
+        </form>
     </div>
 </section>
   </main>
