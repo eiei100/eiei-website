@@ -166,6 +166,10 @@ header ul li {
 .section3 .text {
     line-height: 1.3;
 }
+.link-blue {
+    color: #3399FF !important;
+    background-color: transparent;
+}
 
 .section4 {
     padding-top: 60px;
