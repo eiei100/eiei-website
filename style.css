@@ -47,7 +47,7 @@ header ul li {
 
 /* --- 【セクション1】トップヒーロー画面 --- */
 .section1 {
-    background-image: url(../images/image1.jpg);
+    background-image: url(images/image1.jpg);
     background-position: center bottom;
     background-size: cover;
     height: 100vh;
