@@ -1,154 +1,174 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>hello eiei</title>
-  
-  <!-- リセットCSS 読み込み -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
-  
-  <!-- style.css 読み込み -->
-  <link rel="stylesheet" href="./css/style.css">
-  
-  <!-- Google Fonts 読み込み -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>えいえい ホームページ</title>
+    <!-- 📄 あなたの既存のCSSファイルへのリンク（パスは環境に合わせて調整してください） -->
+    <link rel="stylesheet" href="./style.css">
 </head>
-  
 <body>
-  
-  <header>
-    <div class="container">
-        <div class="row">
-            <a href="./" class="logo">hello eiei</a>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-  </header>
-  
-  <main>
-    <section class="section1">
+
+    <main>
+        <!-- 🟢 【セクション1】トップヒーロー画面 -->
+            <section class="section1">
         <div class="container">
             <p class="heading">hello eiei</p>
-            <h1>えいえい<br>ホームページ</h1>
-            <p class="text">2025年6月19日 開設</p>
-            <a href="#contact">Contact</a>
+            <h1>えいえいホームページ</h1> <!-- 👈 タイトルはどっしり固定！ -->
+            
+            <!-- 🆕 サブテキストを1回だけのスマートタイピングに変更 -->
+            <p class="text">
+                <span id="typing-text">Webとゲーム制作に挑戦中。</span><span class="cursor">|</span>
+            </p>
+            
+            <a href="#portfolio-game" style="background-color: #b8860b; color: white;">最新作を遊ぶ！</a>
         </div>
         <div class="filter"></div>
     </section>
 
-    <section class="section2" id="service">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="./images/pc.png" alt="自己紹介">
-                    <h2>自己紹介</h2>
-                    <hr>
-                    <p class="text">
-                        PCぽちぽちの大学生、Webとゲーム制作に挑戦中。
-                        好きなことを追求しながら、日々スキルアップを目指しています！
-                    </p>
-                </div>
-                <div class="col">
-                    <img src="./images/flag.png" alt="今の目標">
-                    <h2>今の目標</h2>
-                    <hr>
-                    <p class="text">
-                        今の目標は、とりあえず大学の単位を取ることと、
-                        Webでの日記を週1でもいいから続けたい。
-                        なにか成果物も作ってみたいな。
-                    </p>
-                </div>
-                <div class="col">
-                    <img src="./images/game.png" alt="趣味">
-                    <h2>趣味</h2>
-                    <hr>
-                    <p class="text">
-                        趣味は前までゲームだったけど、人生に悪影響が出るレベルでハマっちゃうから
-                        今は謹慎中。ギターもたまに弾いたり、弾かなかったり、、
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-<section class="section3" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>今やってること</h2>
-                <hr>
-                <ul class="text">
-                    <li>HTML・CSSの勉強と、それを使ったWeb日記制作</li>
-                    <li>Flaskの勉強（Web系のアプリ作り）</li>
-                    <li>Pythonの基礎勉強（Flaskのために）</li>
-                </ul>
+        <!-- 🟢 【セクション2】自己紹介・目標・趣味（3カラム） -->
+        <section class="section2" id="service">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="./images/pc.png" alt="自己紹介">
+                        <h2>自己紹介</h2>
+                        <hr>
+                        <p class="text">
+                            Webとゲーム制作に挑戦中。
+                            好きなことを追求しながら、日々スキルアップを目指しています！
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="./images/flag.png" alt="今の目標">
+                        <h2>今の目標</h2>
+                        <hr>
+                        <p class="text">
+                            今の目標は、引き続き大学の単位を死守することと、
+                            面白い2Dゲーム制作すること。
+                            新しくC#も学んでみたい。
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="./images/game.png" alt="趣味">
+                        <h2>趣味</h2>
+                        <hr>
+                        <p class="text">
+                            趣味はゲームと筋トレ。
+                            ゲームに関してはやる側も作る側も好き。
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <img src="./images/image2.jpg" width="100%"
-                alt="今やってること">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>成果物欄</h2>
-                <hr>
-                <ul class="text">
-                    <li>
-                        <a href="https://flask-blog-pbcy.onrender.com" class="link-blue" target="_blank">web日記（ブログ）</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col">
-                <img src="./images/image3.jpg" width="100%"
-                alt="成果物欄">
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section4" id="news">
+        <!-- 🟢 【セクション3】実績と現在進行形の活動 -->
+        <section class="section3" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>今やってること（2026最新）</h2>
+                        <hr>
+                        <ul class="text">
+                            <li><strong>JavaScript</strong> を使った2Dゲーム開発</li>
+                            <li>CSSのメディアクエリを用いた、PC・スマホ完全レスポンシブの追求</li>
+                            <li>C#勉強中、Unityに挑戦してみたい</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="./images/image2.jpg" width="100%" alt="今やってること">
+                    </div>
+                </div>
+
+                <!-- 🆕 【大注目】今回作った最新作「ケルト・マーケット12」のサイバー紹介カード -->
+                <div class="row" id="portfolio-game">
+                    
+                    <!-- 📄 左側：ゲームの説明テキスト -->
+                    <div class="col">
+                        <h2>🌟 最新成果物：ケルト・マーケット12</h2>
+                        <hr>
+                        <p class="text">
+                            <strong>【概要】</strong> 12ヶ月の制限時間内に暴騰・暴落する相場の波を読み、3つの商品を売買して大富豪を目指す2D投資シミュレーションゲーム。<br>
+                            <strong>【こだわり】</strong> スマホの親指でもPCのクリックでも快適に遊べるよう、CSSメディアクエリを駆使してレイアウトが自動変化する「マルチデバイス対応」を徹底。
+                        </p>
+                        <ul class="text">
+                            <li><strong>開発技術：</strong> HTML5 / CSS3 / JavaScript (ES6)</li>
+                            <li><strong>公開先：</strong> GitHub Pages</li>
+                        </ul>
+                        <!-- 🔗 交易開始ボタン -->
+                        <a href="https://eiei100.github.io/celtic-market12/" class="link-blue" target="_blank">
+                            ⚔️ 交易を開始する（今すぐ遊ぶ）
+                        </a>
+                    </div>
+                    
+                    <!-- 🎨 右側：ゲームアイコン画像（リンク先もゲームURLに修正！） -->
+                    <div class="portfolio-game-icon-wrap">
+                        <a href="https://eiei100.github.io/celtic-market12/" target="_blank" class="portfolio-game-icon-link">
+                            <img src="./images/celtic-icon.png" alt="ケルト・マーケット12 アイコン" class="portfolio-game-icon">
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- 📜 過去の成果物（Flask日記） -->
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col">
+                        <h2>過去の成果物欄</h2>
+                        <hr>
+                        <ul class="text">
+                            <li>
+                                <a href="https://eiei100.github.io/celtic-market12/" class="link-blue" target="_blank">ケルト・マーケット12</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="./images/image3.jpg" width="100%" alt="成果物欄">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🟢 【セクション4】更新履歴（News）エリア -->
+        <section class="section4" id="news">
     <div class="container">
         <h2>news</h2>
         <hr>
         <ul>
-            <li>
-                <p class="date">2025.07.05</p>
-                <p>web日記（ブログ）完成!
-                </p>
+            <!-- ✨ 最新のニュース1（外に出しておく） -->
+            <li style="font-weight: bold; color: #2cb67d; border-color: #2cb67d;">
+                <p class="date">2026.06.07</p>
+                <p>🚀 最新作Webゲーム『ケルト・マーケット12』をGitHub Pagesにリリース！</p>
             </li>
-            <li>
-                <p class="date">2025.06.22</p>
-                <p>GitHabでの公開ではお問い合せ欄が機能しないことが発覚し絶望。お問い合せ欄削除
-                </p>
-            </li>
-            <li>
-                <p class="date">2025.06.21</p>
-                <p>HPアップデート：お問い合せ欄追加（送信機能未実装）</p>
-            </li>
+            <!-- ✨ 最新のニュース2（外に出しておく） -->
             <li>
                 <p class="date">2025.06.20</p>
                 <p>HPアップデート：news欄追加</p>
             </li>
-            <li>
-                <p class="date">2025.06.19</p>
-                <p>HPリリース日</p>
-            </li>
+
+            <!-- 🔒 ここから下の過去ニュースをJSで隠して開閉させる -->
+            <div id="past-news" class="hidden-news">
+                <li>
+                    <p class="date">2025.06.19</p>
+                    <p>HPリリース日</p>
+                </li>
+            </div>
         </ul>
+
+        <!-- 🔘 もっと見るボタン（トップのボタンと同じサイバー風デザインにします） -->
+        <button id="news-toggle-btn" class="link-blue btn-news-toggle">
+    ▼ 過去のニュースをもっと見る
+        </button>
+
     </div>
 </section>
-  </main>
-  
-  <footer>© えいえい</footer>
-  
-</body>
 
+    </main>
+    
+    <!-- 🟢 フッター -->
+    <footer>© えいえい</footer>
+
+    <script src="main.js"></script>
+</body>
 </html>

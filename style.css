@@ -1,0 +1,518 @@
+/* ==========================================================================
+   🌐 1. ベース・ヘッダー・共通スタイル
+   ========================================================================== */
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: #ffffff;
+    background-color: #16161a;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-weight: 700;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+header .container {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+header .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+header .logo {
+    font-size: 24px;
+}
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header ul li {
+    margin-left: 30px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   📺 2. 各セクションの基本スタイル
+   ========================================================================== */
+
+/* --- 【セクション1】トップヒーロー画面 --- */
+.section1 {
+    background-image: url(../images/image1.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.section1 .filter {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.section1 .container {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+.section1 .heading {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #2cb67d;
+}
+.section1 h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.section1 .text {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* ===================================================
+   🚀 トップ画面の「最新作を遊ぶ！」ボタンの超絶強化
+   =================================================== */
+.section1 a {
+    position: relative;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    padding: 14px 36px 16px 36px !important; /* 黄金比の余白に調整 */
+    background-color: #7f5af0 !important;   /* 1年前のメインカラー「パープル」に統一！ */
+    color: #fffffe !important;              /* パキッとした白文字 */
+    border-radius: 8px !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 4px 15px rgba(127, 90, 240, 0.4) !important; /* ボタン自体を光らせる */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; /* 超なめらかなアニメーション */
+    margin-top: 15px;
+    border: 2px solid transparent !important;
+}
+
+/* ボタンにマウスを乗せた時（ホバー時）のサイバー演出 */
+.section1 a:hover {
+    background-color: transparent !important; /* 背景を透明にして枠線だけにする */
+    border-color: #2cb67d !important;         /* 枠線をエメラルドグリーンに！ */
+    color: #2cb67d !important;                /* 文字もグリーンに発光 */
+    box-shadow: 0 6px 25px rgba(44, 182, 125, 0.4) !important; /* 緑色の光を放つ */
+    transform: translateY(-2px);              /* ほんの少し上に浮き上がる */
+}
+
+/* スマホ用のボタンの大きさを最適化 */
+@media screen and (max-width: 480px) {
+    .section1 a {
+        width: 80% !important; /* スマホでもデカすぎず、シュッとスタイリッシュに */
+        font-size: 14px !important;
+        padding: 12px 20px !important;
+    }
+}
+
+
+/* 🆕 トップの「最新作を遊ぶ！」サイバーネオンボタン */
+.btn-start-game {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 40px 20px 40px;
+    display: inline-block;
+    background-color: #7f5af0;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(127, 90, 240, 0.4);
+    transition: 0.2s ease;
+}
+.btn-start-game:hover {
+    background-color: #2cb67d;
+    box-shadow: 0 4px 20px rgba(44, 182, 125, 0.6);
+}
+
+/* --- 【セクション2】自己紹介 3カラム --- */
+.section2 {
+    margin-bottom: 45px;
+}
+.section2 .container {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+.section2 .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transform: translateY(-48px);
+    z-index: 2;
+    position: relative;
+}
+.section2 .col {
+    background-color: #ffffff;
+    width: 32%;
+    color: #16161a;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.section2 img {
+    background-color: #7f5af0;
+    width: 60px;
+    padding: 10px;
+    border-radius: 9px;
+    margin-bottom: 16px;
+}
+.section2 h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.section2 hr {
+    border: solid 2px #2cb67d;
+    margin-bottom: 16px;
+    width: 48px;
+}
+.section2 .text {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* --- 【セクション3】成果物（ポートフォリオ） --- */
+.section3 {
+    padding-top: 45px;
+    margin-bottom: 60px;
+}
+.section3 .container {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+.section3 .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.section3 .col {
+    width: 46%;
+}
+.section3 h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.3;
+}
+.section3 hr {
+    border: solid 2px #2cb67d;
+    margin-bottom: 20px;
+    width: 60px;
+}
+.section3 .text {
+    line-height: 1.5;
+}
+
+/* 🔗 過去の実績（Flaskリンクなど）用のスマートなエメラルド色リンク */
+.link-blue {
+    color: #2cb67d !important;
+    text-decoration: underline !important;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+.link-blue:hover {
+    color: #7f5af0 !important;
+}
+
+/* --- 【セクション4】News ＆ フッター --- */
+.section4 {
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+.section4 .container {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+.section4 h2 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section4 hr {
+    border: solid 2px #2cb67d;
+    margin: 0 auto 40px;
+    width: 60px;
+}
+.section4 ul {
+    max-width: 700px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+.section4 li {
+    border: solid 1px #ffffff;
+    margin-bottom: 20px;
+    padding: 16px 24px;
+}
+.section4 .date {
+    color: #7f5af0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+/* 🆕 クエスト達成Newsの超目立つ最新ハイライトカラー */
+.news-highlight {
+    border-color: #2cb67d !important; /* 枠線もエメラルドグリーンに */
+}
+.news-highlight .date,
+.news-highlight p {
+    color: #2cb67d !important;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    color: #16161a;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 20px 0;
+}
+
+/* ==========================================================================
+   🎮 3. 最新作「ケルト・マーケット12」専用サイバーカードスタイル
+   ========================================================================== */
+#portfolio-game {
+    background-color: #242629 !important; /* 漆黒トーンのカード */
+    border: 2px solid #7f5af0 !important; /* ネオンパープルのエッジ */
+    padding: 30px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+    transition: 0.3s ease;
+    width: 100%;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+/* マウスを乗せるとエメラルドに妖しく輝く近未来ホバー */
+#portfolio-game:hover {
+    transform: translateY(-5px);
+    border-color: #2cb67d !important;
+    box-shadow: 0 12px 40px rgba(44, 182, 125, 0.3) !important;
+}
+
+#portfolio-game h2 {
+    color: #ffffff !important;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+#portfolio-game .text {
+    color: #94a1b2 !important; /* 読みやすい明度のグレー */
+}
+
+#portfolio-game strong {
+    color: #2cb67d !important; /* 技術名をネオン強調 */
+}
+
+/* 💰 ゲームの「今すぐ遊ぶ」ボタン専用スタイル */
+#portfolio-game .link-blue {
+    display: inline-block !important;
+    background-color: #7f5af0 !important; /* パープル背景のデカボタンに変形 */
+    color: #ffffff !important;
+    padding: 14px 32px !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(127, 90, 240, 0.4);
+}
+#portfolio-game .link-blue:hover {
+    background-color: #2cb67d !important; /* ホバーでエメラルドにフラッシュ */
+    box-shadow: 0 4px 20px rgba(44, 182, 125, 0.6);
+}
+
+/* ==========================================================================
+   📱 4. スマートフォン完全対応（レスポンシブメディアクエリ）
+   ========================================================================== */
+@media screen and (max-width: 767px) {
+    .section1 .container {
+        width: 95%;
+    }
+    .section1 h1 {
+        font-size: 27px;
+    }
+    .section2 .row {
+        transform: translateY(-20px); /* スマホ時は浮き上がりを少しマイルドに */
+    }
+    .section2 .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .section3 .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    /* 🎮 スマホ画面でのゲーム紹介枠の最適化（縦長でも絶対崩れない） */
+    #portfolio-game {
+        padding: 20px !important;
+        text-align: center;
+        margin-top: 30px !important;
+    }
+    #portfolio-game .col {
+        text-align: left;
+        width: 100% !important;
+    }
+    #portfolio-game h2 {
+        font-size: 20px !important;
+    }
+    #portfolio-game .link-blue {
+        display: block !important;
+        width: 100% !important;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 12px 0 !important;
+    }
+}
+
+/* タイピングのカーソル点滅アニメーション */
+.cursor {
+    color: #2cb67d; /* エメラルドグリーン */
+    animation: blink 0.7s infinite;
+    font-weight: normal;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+/* ===================================================
+   📰 News欄のアコーディオン開閉アニメーション
+   =================================================== */
+.hidden-news {
+    max-height: 0;         /* 最初は高さをゼロにする */
+    opacity: 0;            /* 最初は透明 */
+    overflow: hidden;      /* はみ出た中身を隠す */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* 0.5秒かけて滑らかに開閉 */
+}
+
+/* JSでこのクラスが追加されたら、ガバッと開く */
+.hidden-news.open {
+    max-height: 1000px;    /* 中身が全部収まる十分な高さ */
+    opacity: 1;            /* クッキリ表示 */
+}
+
+/* ===================================================
+   🔘 News欄の「もっと見る」ボタンの専用デザイン
+   =================================================== */
+.btn-news-toggle {
+    display: block !important;
+    margin: 35px auto 0 !important; /* 上に少し余裕を持たせて中央配置 */
+    padding: 12px 28px !important;  /* 押しやすいスマートなサイズ感 */
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    background-color: #7f5af0 !important; /* メインのネオンパープル */
+    color: #fffffe !important;
+    border: 2px solid transparent !important;
+    border-radius: 6px !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 4px 15px rgba(127, 90, 240, 0.3) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ボタンにマウスを乗せた時（ホバー時）のサイバー演出 */
+.btn-news-toggle:hover {
+    background-color: transparent !important; /* 背景を透明にする */
+    border-color: #2cb67d !important;         /* 枠線をエメラルドグリーンに */
+    color: #2cb67d !important;                /* 文字もエメラルドグリーンに */
+    box-shadow: 0 6px 20px rgba(44, 182, 125, 0.5) !important; /* 緑色の後光 */
+    transform: translateY(-2px);              /* わずかに浮き上がる */
+}
+
+/* 📱 スマホ画面（横幅480px以下）の時は横幅を広げて押しやすく */
+@media screen and (max-width: 480px) {
+    .btn-news-toggle {
+        width: 90% !important; /* スマホ画面にフィット */
+        font-size: 13px !important;
+        padding: 12px 0 !important;
+    }
+}
+
+/* 2. アイコン画像自体のサイバーデザイン（背景透過・枠線なし決定版） */
+.portfolio-game-icon {
+    width: 100%;           /* 横幅いっぱいに広げる */
+    max-width: 320px;      /* スマホで大きくなりすぎない限界サイズ */
+    height: auto !important; /* 縦幅の自動計算を強制して潰れを直す */
+    border-radius: 0px;    /* 枠がないので角丸を0にしてスッキリ */
+    
+    /* 💡 【ここを修正】四角い影（box-shadow）を辞めて、
+       イラストの輪郭の形に沿ってクッキリ影を落とすプロの技（drop-shadow）に変更 */
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.6));
+    cursor: pointer; /* 🆕 マウスを乗せた時に指マーク（クリック可能）にするお守り */
+    border: none !important; /* 枠線を完全に消去 */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* カード全体がホバーされた時、アイコンがフワッとネオン発光する演出 */
+#portfolio-game:hover .portfolio-game-icon {
+    transform: scale(1.05); /* 触ったときにフワッと少しだけ大きく浮き上がる */
+    
+    /* 💡 ホバー時に、透過イラストの背後からテーマカラー（紫）の後光を差し込ませる */
+    filter: drop-shadow(0 8px 25px rgba(127, 90, 240, 0.4));
+}
+
+/* 3. 💻 PC画面（横幅768px以上）の時の横並び・サイズ調整 */
+@media (min-width: 768px) {
+    #portfolio-game {
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .portfolio-game-icon-wrap {
+        width: 40% !important; /* PCでは右側の画像エリアの幅を40%に固定 */
+        padding: 0;
+    }
+    
+    .portfolio-game-icon {
+        width: 100% !important; /* エリア内で最大化 */
+        max-width: 380px;      /* PCで見栄えが良い迫力のあるサイズ */
+    }
+}
+
+/* ===================================================
+   🔗 画像リンクが小さくなるのを防ぐための専用スタイル
+   =================================================== */
+.portfolio-game-icon-link {
+    display: block !important;
+    width: 100% !important;   /* 👈 これが最重要！親要素の幅100%まで広げる */
+    text-align: center;
+}
+
+.portfolio-game-icon {
+    /* (以前の記述に、以下の一行を足しておいてください) */
+    cursor: pointer;          /* マウスを乗せた時に指マークにする */
+}
