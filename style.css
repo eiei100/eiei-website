@@ -226,7 +226,7 @@ header ul li {
     line-height: 1.5;
 }
 
-/* 🔗 過去の実績（Flaskリンクなど）用のスマートなエメラルド色リンク */
+/* 🔗 過去の実績（リンクなど）用のスマートなエメラルド色リンク */
 .link-blue {
     color: #2cb67d !important;
     text-decoration: underline !important;
@@ -296,11 +296,11 @@ footer {
 }
 
 /* ==========================================================================
-   🎮 3. 最新作「ケルト・マーケット12」専用サイバーカードスタイル
+   🎮 3. 最新作の専用サイバーカードスタイル（ここまではそのまま）
    ========================================================================== */
 #portfolio-game {
-    background-color: #242629 !important; /* 漆黒トーンのカード */
-    border: 2px solid #7f5af0 !important; /* ネオンパープルのエッジ */
+    background-color: #242629 !important;
+    border: 2px solid #7f5af0 !important;
     padding: 30px !important;
     border-radius: 12px !important;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
@@ -310,7 +310,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* マウスを乗せるとエメラルドに妖しく輝く近未来ホバー */
 #portfolio-game:hover {
     transform: translateY(-5px);
     border-color: #2cb67d !important;
@@ -325,17 +324,16 @@ footer {
 }
 
 #portfolio-game .text {
-    color: #94a1b2 !important; /* 読みやすい明度のグレー */
+    color: #94a1b2 !important;
 }
 
 #portfolio-game strong {
-    color: #2cb67d !important; /* 技術名をネオン強調 */
+    color: #2cb67d !important;
 }
 
-/* 💰 ゲームの「今すぐ遊ぶ」ボタン専用スタイル */
 #portfolio-game .link-blue {
     display: inline-block !important;
-    background-color: #7f5af0 !important; /* パープル背景のデカボタンに変形 */
+    background-color: #7f5af0 !important;
     color: #ffffff !important;
     padding: 14px 32px !important;
     border-radius: 6px !important;
@@ -345,9 +343,113 @@ footer {
     box-shadow: 0 4px 15px rgba(127, 90, 240, 0.4);
 }
 #portfolio-game .link-blue:hover {
-    background-color: #2cb67d !important; /* ホバーでエメラルドにフラッシュ */
+    background-color: #2cb67d !important;
     box-shadow: 0 4px 20px rgba(44, 182, 125, 0.6);
 }
+
+/* ==========================================================================
+   🛠️ ここから下を最新の設定に書き換えてください
+   ========================================================================== */
+
+/* 💡 リストのドット（黒丸）と左側の無駄な余白を強制リセット */
+.portfolio-thumb-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0;
+}
+
+/* 💡 アイコンとタイトルを【絶対に横並び】にして、縦の中心をぴったり揃える */
+.portfolio-game-link {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important; /* 文字の下線を一旦リセット */
+    width: fit-content;
+}
+
+/* 💡 画面比率に合わせて動く、大きめのアイコン画像スタイル */
+.portfolio-thumb-img {
+    /* 外枠のサイズを完全に一貫（スマホ最低60px〜最大120px） */
+    width: clamp(60px, 10vw, 120px) !important;
+    height: clamp(60px, 10vw, 120px) !important;
+    
+    border: 2px solid #2cb67d;     /* サイバー風のエメラルド枠線 */
+    border-radius: 12px;           /* ゆるやかな角丸 */
+    margin-right: 18px;            /* 右側のタイトル文字との隙間 */
+    flex-shrink: 0;                /* 横潰れ防止 */
+    background-color: #16161a;     /* 透過画像が引き締まる暗い背景色 */
+    
+    /* 💡【最重要】透過の余白を一切無視して、枠線の内側100%に画像をピッタリ密着させる */
+    background-size: 100% 100% !important; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* 🖱️ マウスを乗せた（ホバー）時に枠線がネオンパープルに変化する演出 */
+.portfolio-game-link:hover .portfolio-thumb-img {
+    transform: scale(1.05);        /* アイコンが少し手前に浮き出る */
+    border-color: #7f5af0;         /* カードのテーマ色のパープルに光る */
+}
+
+
+/*　==============================
+    ゲーム説明
+    ===========================*/
+    /* アコーディオンの各アイテム */
+.accordion-item {
+    border-bottom: 1px solid rgba(44, 182, 125, 0.2); /* うっすら区切り線 */
+    margin-bottom: 16px !important;
+    padding-bottom: 8px;
+}
+
+/* クリックできるヘッダー（横並びにして左右の端に配置） */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* 右側の矢印（▼）のスタイル */
+.accordion-arrow {
+    color: #2cb67d;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    margin-left: 20px;
+}
+
+/* 💡 開いたときに矢印を180度回転させて（▲）にする */
+.accordion-header.is-open .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+/* 💡 アコーディオンの中身（最初は高さを0にして隠す） */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* 💡 JavaScriptで「is-open」クラスがついたら、すっと下に広げる */
+.accordion-content.is-open {
+    max-height: 300px; /* 広がったときの最大高さの目安 */
+    opacity: 1;
+}
+
+/* 内側の文章の余白設定 */
+.accordion-content-inner {
+    padding: 15px 0 10px 138px; /* アイコンの幅（120px+隙間）に合わせて左余白を作り、綺麗に整列させます */
+    color: #94a1b2;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.accordion-content-inner p {
+    margin: 0 0 10px 0;
+}
+
 
 /* ==========================================================================
    📱 4. スマートフォン完全対応（レスポンシブメディアクエリ）
@@ -516,3 +618,4 @@ footer {
     /* (以前の記述に、以下の一行を足しておいてください) */
     cursor: pointer;          /* マウスを乗せた時に指マークにする */
 }
+
