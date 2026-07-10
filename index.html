@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>えいえい ホームページ</title>
+    <title>Ei100 ホームページ</title>
+
+    <!-- 📈 SEO / OGP タグを追加 -->
+    <meta name="description" content="Webとゲーム制作に挑戦中のえいえいのポートフォリオサイト。JavaScriptやUnityで作った2Dゲームを公開中。">
+    <meta property="og:title" content="Ei100 ホームページ">
+    <meta property="og:description" content="Webとゲーム制作に挑戦中のえいえいのポートフォリオサイト。JavaScriptやUnityで作った2Dゲームを公開中。">
+    <meta property="og:image" content="./images/icon/Backstab_Escape_2D_Icon.png">
+    <meta property="og:type" content="website">
+
     <!-- 📄 あなたの既存のCSSファイルへのリンク（パスは環境に合わせて調整してください） -->
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -11,20 +19,21 @@
 
     <main>
         <!-- 🟢 【セクション1】トップヒーロー画面 -->
-            <section class="section1">
-        <div class="container">
-            <p class="heading">hello eiei</p>
-            <h1>えいえいホームページ</h1> <!-- 👈 タイトルはどっしり固定！ -->
-            
-            <!-- 🆕 サブテキストを1回だけのスマートタイピングに変更 -->
-            <p class="text">
-                <span id="typing-text">Webとゲーム制作に挑戦中。</span><span class="cursor">|</span>
-            </p>
-            
-            <a href="#portfolio-game" style="background-color: #b8860b; color: white;">最新作を遊ぶ！</a>
-        </div>
-        <div class="filter"></div>
-    </section>
+        <section class="section1">
+            <div class="container">
+                <p class="heading">hello eiei</p>
+                <h1>Ei100ホームページ</h1> <!-- 👈 タイトルはどっしり固定！ -->
+
+                <!-- 🆕 サブテキストを1回だけのスマートタイピングに変更 -->
+                <p class="text">
+                    <span id="typing-text">Webとゲーム制作に挑戦中。</span><span class="cursor">|</span>
+                </p>
+
+                <!-- 🎨 インラインstyleをクラスに変更（style.cssに .btn-gold を追加してください） -->
+                <a href="#portfolio-game" class="btn-gold">最新作を遊ぶ！</a>
+            </div>
+            <div class="filter"></div>
+        </section>
 
 
         <!-- 🟢 【セクション2】自己紹介・目標・趣味（3カラム） -->
@@ -81,147 +90,174 @@
                     </div>
                 </div>
 
-                <!-- 🆕 【大注目】今回作った最新作「クリック・レストラン」の紹介カード -->
-<div class="row" id="portfolio-game">
-    
-    <!-- 📄 左側：ゲームの説明テキスト -->
-    <div class="col">
-        <h2>🌟 最新成果物：クリック・レストラン</h2>
-        <hr>
-        <p class="text">
-            <strong>【概要】</strong> 画面をクリックして料理を増やし、レストランを大きくしていくクッキークリッカー風の放置・クリック育成シミュレーションゲーム。<br>
-            <strong>【こだわり】</strong> スマホ画面でも操作自体は可能ですが、快適なクリック連打や大画面での演出を楽しめるよう「PC環境でのプレイ」を強く推奨しています。
-        </p>
-        <ul class="text">
-            <li><strong>開発技術：</strong> HTML5 / CSS3 / JavaScript (ES6)</li>
-            <li><strong>公開先：</strong> GitHub Pages</li>
-        </ul>
-        <!-- 🔗 経営開始ボタン -->
-        <a href="https://eiei100.github.io/click-restaurant/" class="link-blue" target="_blank">
-            🍳 経営を開始する（今すぐ遊ぶ）
-        </a>
-    </div>
-    
-    <!-- 🎨 右側：ゲームアイコン画像 -->
-    <div class="portfolio-game-icon-wrap">
-        <a href="https://eiei100.github.io/click-restaurant/" target="_blank" class="portfolio-game-icon-link">
-            <img src="./images/icon/click-restaurant-icon.png" alt="クリック・レストラン アイコン" class="portfolio-game-icon">
-        </a>
-    </div>
-</div>
+                <!-- 🆕 【大注目】今回作った最新作「Backstab Escape 2D」の紹介カード -->
+                <div class="row" id="portfolio-game">
 
-
-
-<!-- 📜 過去の成果物（アコーディオン付きゲーム一覧） -->
-<div class="row" style="margin-top: 30px;">
-    <div class="col">
-        <h2>過去の成果物欄</h2>
-        <hr>
-        <ul class="text portfolio-thumb-list">
-            
-            <!-- 🎮 項目1：ケルト・マーケット -->
-            <li class="accordion-item">
-                <!-- クリックするヘッダー部分 -->
-                <div class="accordion-header" onclick="toggleAccordion('celtic-desc', this)">
-                    <div class="portfolio-game-link">
-                        <div class="portfolio-thumb-img" style="background-image: url('./images/icon/celtic-icon.png');"></div>
-                        <span class="link-blue">ケルト・マーケット</span>
+                    <!-- 📄 左側：ゲームの説明テキスト -->
+                    <div class="col">
+                        <h2>🌟 最新成果物：Backstab Escape 2D - 2〜4人対戦心理ゲーム</h2>
+                        <hr>
+                        <p class="text">
+                            <strong>【概要】</strong> 巨大爆弾が仕掛けられた密室から、2〜4人で協力してハッキング解除を目指すオンライン心理ボードゲームです。全5ステージを生き延びても、最終勝者は「最も体力を温存した者」のみというルール。クリアのために全力を出すか、体力を温存するためにサボるか、プレイヤー同士の協力と裏切りのジレンマを楽しめます。
+                            <br>
+                            <strong>【こだわり】</strong> PCおよびスマートフォンでのマルチプレイに両対応しています。
+                        </p>
+                        <ul class="text">
+                            <li><strong>開発技術：</strong> Unity (2D) / WebGLマルチプレイ対応</li>
+                            <li><strong>公開先：</strong> Unity room</li>
+                        </ul>
+                        <!-- ゲーム開始ボタン -->
+                        <a href="https://unityroom.com/games/backstab-escape-2d" class="link-blue" target="_blank" rel="noopener noreferrer">
+                            💣 ゲームを開始する（今すぐ遊ぶ）
+                        </a>
                     </div>
-                    <!-- 右側の矢印ボタン -->
-                    <span class="accordion-arrow">▼</span>
-                </div>
-                <!-- すっと広がる説明欄（最初は閉じている） -->
-                <div id="celtic-desc" class="accordion-content">
-                    <div class="accordion-content-inner">
-                        <p><strong>【概要】</strong> 12ヶ月の制限時間内に暴騰・暴落する相場の波を読み、3つの商品を売買して大富豪を目指す2D投資シミュレーションゲーム。</p>
-                        <p><strong>【開発技術】</strong> HTML5 / CSS3 / JavaScript (ES6)</p>
-                        <a href="https://eiei100.github.io/celtic-market/" class="link-blue" target="_blank">⚔️ ゲームをプレイする</a>
+
+                    <!-- 🎨 右側：ゲームアイコン画像 -->
+                    <div class="portfolio-game-icon-wrap">
+                        <a href="https://unityroom.com/games/backstab-escape-2d" target="_blank" rel="noopener noreferrer" class="portfolio-game-icon-link">
+                            <img src="./images/icon/Backstab_Escape_2D_Icon.png" alt="Backstab Escape 2D - 2〜4人対戦心理ゲーム アイコン" class="portfolio-game-icon">
+                        </a>
                     </div>
                 </div>
-            </li>
 
-            <!-- 🎮 項目2：クリック・レストラン -->
-            <li class="accordion-item">
-                <!-- クリックするヘッダー部分 -->
-                <div class="accordion-header" onclick="toggleAccordion('restaurant-desc', this)">
-                    <div class="portfolio-game-link">
-                        <div class="portfolio-thumb-img" style="background-image: url('./images/icon/click-restaurant-icon.png');"></div>
-                        <span class="link-blue">クリック・レストラン</span>
+
+
+                <!-- 📜 成果物一覧（アコーディオン付きゲーム一覧） -->
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col">
+                        <h2>成果物一覧</h2>
+                        <hr>
+                        <ul class="text portfolio-thumb-list">
+
+                            <!-- 🎮 項目1：Backstab Escape 2D - 2〜4人対戦心理ゲーム -->
+                            <li class="accordion-item">
+                                <!-- クリックするヘッダー部分 -->
+                                <div class="accordion-header" onclick="toggleAccordion('BackstabEscape2D-desc', this)">
+                                    <div class="portfolio-game-link">
+                                        <div class="portfolio-thumb-img" style="background-image: url('./images/icon/Backstab_Escape_2D_Icon.png');"></div>
+                                        <span class="link-blue">Backstab Escape 2D - 2〜4人対戦心理ゲーム</span>
+                                    </div>
+                                    <!-- 右側の矢印ボタン -->
+                                    <span class="accordion-arrow">▼</span>
+                                </div>
+                                <!-- すっと広がる説明欄（最初は閉じている） -->
+                                <div id="BackstabEscape2D-desc" class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>【概要】</strong><br>
+                                        巨大爆弾が仕掛けられた密室から、2〜4人で協力してハッキング解除を目指すオンライン心理ボードゲーム。全5ステージを生き延びても、最終勝者は「最も体力を温存した者」のみというルール。</p>
+                                        <p><strong>【開発技術】</strong><br>
+                                        Unity (2D) / WebGLマルチプレイ対応</p>
+                                        <a href="https://unityroom.com/games/backstab-escape-2d" class="link-blue" target="_blank" rel="noopener noreferrer">💣 ゲームをプレイする</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- 🎮 項目2：クリック・レストラン -->
+                            <li class="accordion-item">
+                                <!-- クリックするヘッダー部分 -->
+                                <div class="accordion-header" onclick="toggleAccordion('restaurant-desc', this)">
+                                    <div class="portfolio-game-link">
+                                        <div class="portfolio-thumb-img" style="background-image: url('./images/icon/click-restaurant-icon.png');"></div>
+                                        <span class="link-blue">クリック・レストラン</span>
+                                    </div>
+                                    <!-- 右側の矢印ボタン -->
+                                    <span class="accordion-arrow">▼</span>
+                                </div>
+                                <!-- すっと広がる説明欄（最初は閉じている） -->
+                                <div id="restaurant-desc" class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>【概要】</strong> 画面をクリックして料理を増やし、レストランを大きくしていく放置・クリック育成シミュレーションゲーム。</p>
+                                        <p><strong>【開発技術】</strong> HTML5 / CSS3 / JavaScript (ES6) 💻 PC環境推奨</p>
+                                        <a href="https://eiei100.github.io/click-restaurant/" class="link-blue" target="_blank" rel="noopener noreferrer">🍳 ゲームをプレイする</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- 🎮 項目3：ケルト・マーケット -->
+                            <li class="accordion-item">
+                                <!-- クリックするヘッダー部分 -->
+                                <div class="accordion-header" onclick="toggleAccordion('celtic-desc', this)">
+                                    <div class="portfolio-game-link">
+                                        <div class="portfolio-thumb-img" style="background-image: url('./images/icon/celtic-icon.png');"></div>
+                                        <span class="link-blue">ケルト・マーケット</span>
+                                    </div>
+                                    <!-- 右側の矢印ボタン -->
+                                    <span class="accordion-arrow">▼</span>
+                                </div>
+                                <!-- すっと広がる説明欄（最初は閉じている） -->
+                                <div id="celtic-desc" class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>【概要】</strong> 12ヶ月の制限時間内に暴騰・暴落する相場の波を読み、3つの商品を売買して大富豪を目指す2D投資シミュレーションゲーム。</p>
+                                        <p><strong>【開発技術】</strong> HTML5 / CSS3 / JavaScript (ES6)</p>
+                                        <a href="https://eiei100.github.io/celtic-market/" class="link-blue" target="_blank" rel="noopener noreferrer">⚔️ ゲームをプレイする</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
                     </div>
-                    <!-- 右側の矢印ボタン -->
-                    <span class="accordion-arrow">▼</span>
-                </div>
-                <!-- すっと広がる説明欄（最初は閉じている） -->
-                <div id="restaurant-desc" class="accordion-content">
-                    <div class="accordion-content-inner">
-                        <p><strong>【概要】</strong> 画面をクリックして料理を増やし、レストランを大きくしていくクッキークリッカー風の放置・クリック育成シミュレーションゲーム。</p>
-                        <p><strong>【開発技術】</strong> HTML5 / CSS3 / JavaScript (ES6) 💻 PC環境推奨</p>
-                        <a href="https://eiei100.github.io/click-restaurant/" class="link-blue" target="_blank">🍳 ゲームをプレイする</a>
+                    <div class="col">
+                        <img src="./images/image3.jpg" width="100%" alt="成果物欄">
                     </div>
                 </div>
-            </li>
-
-        </ul>
-    </div>
-    <div class="col">
-        <img src="./images/image3.jpg" width="100%" alt="成果物欄">
-    </div>
-</div>
-
-
 
             </div>
         </section>
 
 
         <!-- 🟢 【セクション4】更新履歴（News）エリア -->
-<section class="section4" id="news">
-    <div class="container">
-        <h2>news</h2>
-        <hr>
-        <ul>
-            <!-- ✨ 最新のニュース1：クリック・レストラン（最上位に追加） -->
-            <li style="font-weight: bold; color: #2cb67d; border-color: #2cb67d;">
-                <p class="date">2026.06.13</p>
-                <p>🚀 最新作Webゲーム『クリック・レストラン』をGitHub Pagesにリリース！</p>
-            </li>
-            <!-- ✨ 最新のニュース2：ケルト・マーケット（外に出しておく） -->
-            <li>
-                <p class="date">2026.06.07</p>
-                <p>🎮 Webゲーム『ケルト・マーケット』をGitHub Pagesにリリース！</p>
-            </li>
-            <!-- ✨ 最新のニュース3（外に出しておく） -->
-            <li>
-                <p class="date">2025.06.20</p>
-                <p>HPアップデート：news欄追加</p>
-            </li>
+        <section class="section4" id="news">
+            <div class="container">
+                <h2>news</h2>
+                <hr>
+                <!-- 🔧 <ul>直下に<div>を置く無効なマークアップを修正。
+                     過去ニュースは別の<ul id="past-news">にまとめ、JS側の
+                     document.getElementById('past-news') はそのまま動作します -->
+                <ul>
+                    <li style="font-weight: bold; color: #2cb67d; border-color: #2cb67d;">
+                        <p class="date">2026.07.09</p>
+                        <p>🚀 Webゲーム『Backstab Escape 2D - 2〜4人対戦心理ゲーム』をUnity roomにリリース！</p>
+                    </li>
 
-            <!-- 🔒 ここから下の過去ニュースをJSで隠して開閉させる -->
-            <div id="past-news" class="hidden-news">
-                <li>
-                    <p class="date">2025.06.19</p>
-                    <p>HPリリース日</p>
-                </li>
+                    <li>
+                        <p class="date">2026.06.13</p>
+                        <p>🚀 Webゲーム『クリック・レストラン』をGitHub Pagesにリリース！</p>
+                    </li>
+
+                    <li>
+                        <p class="date">2026.06.07</p>
+                        <p>🎮 Webゲーム『ケルト・マーケット』をGitHub Pagesにリリース！</p>
+                    </li>
+                </ul>
+
+                <!-- 🔒 過去ニュースをJSで隠して開閉させる（独立したulに分離） -->
+                <ul id="past-news" class="hidden-news">
+                    <li>
+                        <p class="date">2025.06.20</p>
+                        <p>HPアップデート：news欄追加</p>
+                    </li>
+
+                    <li>
+                        <p class="date">2025.06.19</p>
+                        <p>HPリリース日</p>
+                    </li>
+                </ul>
+
+                <!-- 🔘 もっと見るボタン（トップのボタンと同じサイバー風デザインにします） -->
+                <button id="news-toggle-btn" class="link-blue btn-news-toggle">
+                    ▼ 過去のニュースをもっと見る
+                </button>
+
             </div>
-        </ul>
-
-        <!-- 🔘 もっと見るボタン（トップのボタンと同じサイバー風デザインにします） -->
-        <button id="news-toggle-btn" class="link-blue btn-news-toggle">
-            ▼ 過去のニュースをもっと見る
-        </button>
-
-    </div>
-</section>
+        </section>
 
     </main>
-    
+
     <!-- 🟢 フッター -->
     <footer>© えいえい</footer>
 
     <script src="main.js"></script>
-        <!-- ⚙️ 外部JavaScriptファイルの読み込み（パスはファイルの場所に合わせて調整してください） -->
+    <!-- ⚙️ 外部JavaScriptファイルの読み込み（パスはファイルの場所に合わせて調整してください） -->
     <script src="portfolio.js"></script>
-</body>
-
 </body>
 </html>
